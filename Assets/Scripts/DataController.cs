@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using Json;
 using System.Linq;
+using UnityEditor;
 
 public class DataController : MonoBehaviour
 {
@@ -56,5 +57,12 @@ public class DataController : MonoBehaviour
         {
             Debug.LogError("Cannot load game data");
         }
+    }
+    public void deleteSaveGameData()
+    {
+        string saveGameFile = Application.dataPath + "/StreamingAssets/data.json";
+        File.Delete(saveGameFile);
+        trigger1Reached = false;
+        trigger2Reached = false;
     }
 }

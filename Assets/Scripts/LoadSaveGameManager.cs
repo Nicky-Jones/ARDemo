@@ -15,4 +15,8 @@ public class LoadSaveGameManager : MonoBehaviour
     {
         dController.loadGameData();
     }
+    public void deleteSaveGame()
+    {
+        dController.deleteSaveGameData();
+    }
 }

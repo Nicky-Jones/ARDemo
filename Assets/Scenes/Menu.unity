@@ -1056,8 +1056,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2088636520}
-        m_MethodName: saveGameData
+      - m_Target: {fileID: 713205452}
+        m_MethodName: deleteSaveGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

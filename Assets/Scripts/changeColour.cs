@@ -20,25 +20,40 @@ public class changeColour : MonoBehaviour
     {
 
     }
+    /// <summary>
+    /// changes the colour of the character to blue
+    /// </summary>
     public void btnBlue()
     {
+        /// finds the material of the character and changes its colour
         ThirdPersonCharacter.transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", Color.blue);
+        /// updates the blue material to the current blue on the character
         blue.color = Color.blue;
+        /// calls the set Material function in changeColourManager script
         changeColourManager.setMaterial(blue);
-        Debug.Log("inside this function");
     }
+    /// <summary>
+    /// changes the colour of the character to green
+    /// </summary>
     public void btnGreen()
     {
+        /// finds the material of the character and changes its colour
         ThirdPersonCharacter.transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", Color.green);
+        /// updates the blue material to the current green on the character
         green.color = Color.green;
+        /// calls the set Material function in changeColourManager script
         changeColourManager.setMaterial(green);
-        Debug.Log("inside this function");
     }
+    /// <summary>
+    /// changes the colour of the character to yellow
+    /// </summary>
     public void btnYellow()
     {
+        /// finds the material of the character and changes its colour
         ThirdPersonCharacter.transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", Color.yellow);
+        /// updates the blue material to the current green on the character
         yellow.color = Color.yellow;
+        /// calls the set Material function in changeColourManager script
         changeColourManager.setMaterial(yellow);
-        Debug.Log("inside this function");
     }
 }

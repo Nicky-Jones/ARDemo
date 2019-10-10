@@ -17,7 +17,10 @@ public class triggeredScript : MonoBehaviour
     {
         
     }
-
+    /// <summary>
+    /// on entering the trigger calls the update trigger function in TestSceneManager Script
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         tSM.updateTriggers(triggerNumber);

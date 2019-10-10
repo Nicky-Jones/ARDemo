@@ -11,10 +11,17 @@ public class LoadSaveGameManager : MonoBehaviour
         dController = GameObject.Find("SaveManager").GetComponent<DataController>();
     }
 
+    /// <summary>
+    /// calls the load game data function from DataController
+    /// </summary>
     public void loadSaveGame()
     {
         dController.loadGameData();
     }
+
+    /// <summary>
+    /// calls the delete save game data function from DataController
+    /// </summary>
     public void deleteSaveGame()
     {
         dController.deleteSaveGameData();

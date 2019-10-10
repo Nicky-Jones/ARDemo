@@ -30,6 +30,9 @@ public class DataController : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         filePath = Path.Combine(Application.streamingAssetsPath, gameDataFileName);
     }
+    /// <summary>
+    /// updates the variables in the save data with the current variables and saves the information to a json data file
+    /// </summary>
     public void saveGameData()
     {
         saveData = new GameData();
@@ -40,6 +43,9 @@ public class DataController : MonoBehaviour
         File.WriteAllText(filePath, jsonData);
         Debug.Log("Saving as Json: " + filePath);
     }
+    /// <summary>
+    /// function to load the game data from the Json file
+    /// </summary>
     public void loadGameData()
     {
 
@@ -58,6 +64,9 @@ public class DataController : MonoBehaviour
             Debug.LogError("Cannot load game data");
         }
     }
+    /// <summary>
+    /// function to delete the save data file and reset the current variables to default
+    /// </summary>
     public void deleteSaveGameData()
     {
         string saveGameFile = Application.dataPath + "/StreamingAssets/data.json";

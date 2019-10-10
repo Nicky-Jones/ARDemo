@@ -27,6 +27,10 @@ public class TestSceneManager : MonoBehaviour
     {
 
     }
+    /// <summary>
+    /// a function that updates the triggers on the plane GameObject
+    /// </summary>
+    /// <param name="triggerNumber"></param>
     public void updateTriggers(int triggerNumber)
     {
         if(triggerNumber == 0)
@@ -52,7 +56,9 @@ public class TestSceneManager : MonoBehaviour
             StartCoroutine(congratulationScenePopUP(2, congratulationScene));
             
     }
-
+    /// <summary>
+    /// activates all of trigger 1's information and saves the game
+    /// </summary>
     private void updateTick1()
     {
         tick1.SetActive(true);
@@ -60,6 +66,9 @@ public class TestSceneManager : MonoBehaviour
         dController.saveGameData();
         StartCoroutine(UIPopUP(2, trigger1UI));
     }
+    /// <summary>
+    /// activates all of trigger 2's information and saves the game
+    /// </summary>
     private void updateTick2()
     {
         tick2.SetActive(true);
@@ -67,12 +76,24 @@ public class TestSceneManager : MonoBehaviour
         dController.saveGameData();
         StartCoroutine(UIPopUP(2, trigger2UI));
     }
+    /// <summary>
+    /// a function to delay the triggers UI 
+    /// </summary>
+    /// <param name="delay"></param>
+    /// <param name="UI"></param>
+    /// <returns></returns>
     private IEnumerator UIPopUP(float delay, GameObject UI)
     {
         UI.SetActive(true);
         yield return new WaitForSeconds(delay);
         UI.SetActive(false);
     }
+    /// <summary>
+    /// a function to delay the gratulationScene UI for trigger UI's to finish
+    /// </summary>
+    /// <param name="delay"></param>
+    /// <param name="UI"></param>
+    /// <returns></returns>
     private IEnumerator congratulationScenePopUP(float delay, GameObject UI)
     {
         yield return new WaitForSeconds(delay);
